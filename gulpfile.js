@@ -2,7 +2,8 @@
 // generated on 2014-09-26 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp'),
-    neat = require('node-neat').includePaths;
+    neat = require('node-neat').includePaths,
+    buildBranch = require('gulp-build-branch');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -73,6 +74,10 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
+
+gulp.task('ghbuild', ['build'], function() {
+  return buildBranch({ branch: 'master', folder: 'dist' });
+});
 
 gulp.task('default', ['clean'], function () {
     gulp.start('build');

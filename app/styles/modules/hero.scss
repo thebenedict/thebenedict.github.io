@@ -1,0 +1,26 @@
+.hero-unit {
+    @include span-columns(12);
+    margin: 0 auto;
+    font-size: $h2-font-size;
+    padding: 40px;
+    text-align: center;
+
+    .addon {
+        display: none;
+        position: absolute;
+    }
+
+    .contact-bar {
+        font-size: $h3-font-size;
+        padding: $h3-font-size / 4;
+
+        span {
+            padding: 0 0.4em;
+        }
+
+        .contact-icon { color: $medium-gray; }
+        .icon-twitter:hover { color: $blue; }
+        .icon-github:hover { color: $dark-gray; }
+        .icon-envelope:hover { color: $red; }
+    }
+}

@@ -121,8 +121,8 @@ cite:before {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?-nddqnv");
-  src: url("fonts/icomoon.eot?#iefix-nddqnv") format("embedded-opentype"), url("fonts/icomoon.woff?-nddqnv") format("woff"), url("fonts/icomoon.ttf?-nddqnv") format("truetype"), url("fonts/icomoon.svg?-nddqnv#icomoon") format("svg");
+  src: url("/fonts/icomoon.eot?-nddqnv");
+  src: url("/fonts/icomoon.eot?#iefix-nddqnv") format("embedded-opentype"), url("/fonts/icomoon.woff?-nddqnv") format("woff"), url("/fonts/icomoon.ttf?-nddqnv") format("truetype"), url("/fonts/icomoon.svg?-nddqnv#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }

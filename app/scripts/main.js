@@ -26,7 +26,7 @@ var appendAfter = function(txt) {
 
 var hideDotCom = function() {
 	clearTimeout(t);
-	$(".com").css("visibility", "hidden");
+	$('.com').css('visibility', 'hidden');
 };
 
 var appendAddons = function(before, after) {
@@ -41,7 +41,7 @@ var init = function() {
 		if ($('.com').css('visibility') === 'hidden') {
 			$('.com').css('visibility', 'visible').hide().fadeIn(500);
 		}
-	}, 500)
+	}, 500);
 };
 
 $(function() {

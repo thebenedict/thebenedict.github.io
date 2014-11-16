@@ -17,6 +17,12 @@ h6 {
   line-height: $header-line-height;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+
+  &.section-header {
+    font-weight: 100;
+    border-bottom: 1px solid $medium-gray;
+    margin-bottom: 1.25em;
+  }
 }
 
 h1 {

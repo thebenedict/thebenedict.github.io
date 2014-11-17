@@ -1,9 +1,11 @@
 .project-card {
     @include span-columns(4);
-    @include omega(4n);
+    @include omega(3n);
     @include media($large-screen-down) {
+        &:nth-child(3n) { margin-right: flex-gutter($grid-columns, $gutter); }
+        &:nth-child(3n+1) { clear: none }
         @include span-columns(3);
-        @include omega(3n);
+        @include omega(2n);
     }
     @include media($medium-screen-down) {
         @include span-columns(6);
@@ -16,18 +18,18 @@
     .image {
         width: 100%;
         overflow: hidden;
-        max-height: 200px;
+        max-height: 160px;
         position: relative;
         box-shadow: 0px 2px 2px $medium-gray;
 
         &:before {
             content: " ";
             position: absolute;
-            height: 40%;
+            height: 35%;
             width: 100%;
             left: 0;
             bottom: 0;
-            @include linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .55));            
+            @include linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .45));            
         }
     }
 

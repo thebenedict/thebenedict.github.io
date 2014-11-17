@@ -1,16 +1,26 @@
+.intro-wrapper {
+	background: $light-gray;
+	padding: 2em;
+	width: 100%;
+	margin: 1em 0 3em 0;
+}
+
 .intro {
-    @include padding(0 1em 1em);
-    @include span-columns(8);
-    @include shift(2);
-    
-    @include media($medium-screen-down) {
-    	@include span-columns(6);
-    	@include shift(0);
-    	font-size: 85%;
-    }
-    
+	@include outer-container;
     font-size: $h4-font-size;
-    margin-bottom: 1em;
     text-align: center;
-    .tagline { font-weight: 100 }
+
+    .tagline {
+    	@include span-columns(8);
+    	@include shift(2);
+
+   		@include media($medium-screen-down) {
+    		@include span-columns(6);
+    		@include shift(0);
+    		padding: 2em 0.5em 4em;
+    	}
+    }
+
+    .small { font-weight: 100; }
+
 }

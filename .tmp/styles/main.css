@@ -48,16 +48,6 @@ h6 {
   margin: 0;
   text-rendering: optimizeLegibility;
 }
-h1.section-header,
-h2.section-header,
-h3.section-header,
-h4.section-header,
-h5.section-header,
-h6.section-header {
-  font-weight: 100;
-  border-bottom: 1px solid #999999;
-  margin-bottom: 1.25em;
-}
 
 h1 {
   font-size: 1.75em;
@@ -314,25 +304,42 @@ html, body {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  margin: 0;
+  padding: 1.5em 0;
+}
+
+.project-section {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 0.5em;
 }
-body:after {
+.project-section:after {
   content: "";
   display: table;
   clear: both;
 }
-
-.project-section {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 100%;
-  padding: 0.5em 1em;
+@media screen and (max-width: 41.875em) {
+  .project-section {
+    padding: 0;
+  }
 }
-.project-section:last-child {
-  margin-right: 0;
+
+.section-header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5em;
+}
+.section-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.section-header h3 {
+  font-weight: 100;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 1.25em;
 }
 
 .browsehappy {
@@ -343,17 +350,18 @@ body:after {
 }
 
 .hero-unit {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 100%;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.5em;
   margin: 0 auto;
-  padding: 30px;
+  padding: 1.5em 0;
   text-align: center;
 }
-.hero-unit:last-child {
-  margin-right: 0;
+.hero-unit:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 @media screen and (max-width: 41.875em) {
   .hero-unit {
@@ -371,6 +379,11 @@ body:after {
   font-size: 1em;
   padding-top: 0.25em;
 }
+@media screen and (max-width: 41.875em) {
+  .hero-unit .contact-bar {
+    font-size: 1.25em;
+  }
+}
 .hero-unit .contact-bar span {
   padding: 0 0.4em;
 }
@@ -387,34 +400,49 @@ body:after {
   color: #e96151;
 }
 
+.intro-wrapper {
+  background: #dddddd;
+  padding: 2em;
+  width: 100%;
+  margin: 1em 0 3em 0;
+}
+
 .intro {
-  padding: 0 1em 1em;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  text-align: center;
+}
+.intro:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.intro .tagline {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
   width: 65.8807828007%;
   margin-left: 17.0596085997%;
-  font-size: 1em;
-  margin-bottom: 1em;
-  text-align: center;
 }
-.intro:last-child {
+.intro .tagline:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 41.875em) {
-  .intro {
+  .intro .tagline {
     float: left;
     display: block;
     margin-right: 4.8291579146%;
     width: 100%;
     margin-left: 0%;
-    font-size: 85%;
+    padding: 2em 0.5em 4em;
   }
-  .intro:last-child {
+  .intro .tagline:last-child {
     margin-right: 0;
   }
 }
-.intro .tagline {
+.intro .small {
   font-weight: 100;
 }
 
@@ -428,10 +456,10 @@ body:after {
 .project-card:last-child {
   margin-right: 0;
 }
-.project-card:nth-child(4n) {
+.project-card:nth-child(3n) {
   margin-right: 0;
 }
-.project-card:nth-child(4n+1) {
+.project-card:nth-child(3n+1) {
   clear: left;
 }
 @media screen and (max-width: 61.25em) {
@@ -441,13 +469,19 @@ body:after {
     margin-right: 4.8291579146%;
     width: 47.5854210427%;
   }
+  .project-card:nth-child(3n) {
+    margin-right: 4.8291579146%;
+  }
+  .project-card:nth-child(3n+1) {
+    clear: none;
+  }
   .project-card:last-child {
     margin-right: 0;
   }
-  .project-card:nth-child(3n) {
+  .project-card:nth-child(2n) {
     margin-right: 0;
   }
-  .project-card:nth-child(3n+1) {
+  .project-card:nth-child(2n+1) {
     clear: left;
   }
 }
@@ -468,19 +502,19 @@ body:after {
 .project-card .image {
   width: 100%;
   overflow: hidden;
-  max-height: 200px;
+  max-height: 160px;
   position: relative;
   box-shadow: 0px 2px 2px #999999;
 }
 .project-card .image:before {
   content: " ";
   position: absolute;
-  height: 40%;
+  height: 35%;
   width: 100%;
   left: 0;
   bottom: 0;
   background-color: transparent;
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.45));
 }
 .project-card .card-bottom {
   transition-property: -webkit-transform;

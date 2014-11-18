@@ -39,9 +39,9 @@ var appendAddons = function(before, after) {
 var init = function() {
 	t = setTimeout(function() {
 		if ($('.com').css('visibility') === 'hidden') {
-			$('.com').css('visibility', 'visible').hide().fadeIn(500);
+			$('.com').css('visibility', 'visible').hide().fadeIn(1000);
 		}
-	}, 500);
+	}, 750);
 };
 
 $(function() {
@@ -62,5 +62,11 @@ $(function() {
 			this.remove();
 		});	
 		init();
+	});
+
+	$('.icon-envelope').click(function() {
+		var name = 'thebenedict';
+		var base = '@gmail.com?subject=hello!';
+		window.location.href = ['mailto:', name, base].join('');
 	});
 });

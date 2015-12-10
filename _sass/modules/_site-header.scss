@@ -1,0 +1,15 @@
+.site-header {
+  @include outer-container;
+  padding: $small-spacing $edge-spacing;
+
+  .site-title { 
+    font-family: $logo;
+    font-size: $base-font-size * 1.6;
+    font-weight: 700;
+    color: $dark-gray;
+  }
+
+  a {
+    &:hover { color: lighten($dark-gray, 15); }
+  }
+}

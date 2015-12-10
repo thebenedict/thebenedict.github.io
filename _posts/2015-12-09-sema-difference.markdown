@@ -7,10 +7,10 @@ custom_js:
 - nv.d3
 - count-charts
 ---
+
 {% include image.html 
   url="/images/sema-difference/reading-headlines.jpg"
-  caption="Men in Stone Town, Zanzibar read headlines on Oct 14, 2015, about 10 days before the election"
-%}
+  caption="Men in Stone Town, Zanzibar read headlines on Oct 14, 2015, about 10 days before the election" %}
 
 > Yes, this great East African country has been among the countries with the
 > best media freedom conditions in the world. 
@@ -322,8 +322,7 @@ and some typical headlines:
 This topic was among the top 10 for each publication, and 4th most common overall. There’s room for interpretation, but I think this shows a media focus on the procedures and mechanics of the election. It suggests a lively interest in the electoral process from a young democracy during its 5th multi-party general election.
 
 {% include image.html 
-  url="/images/sema-difference/posters.jpg"
-%}
+  url="/images/sema-difference/posters.jpg" %}
 
 ### Wrapping up
 When I started this project I thought it would be an opportunity to learn more about algorithms from text analytics, but simple tools ended up being able to identify high level trends. While the analysis surfaced some interesting features of the election coverage, overall topic coverage in English and Swahili publications seems similar. I don’t think it would be valuable to probe for more subtle differences with computational techniques alone.

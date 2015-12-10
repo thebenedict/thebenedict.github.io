@@ -1,0 +1,49 @@
+table {
+  border-collapse: collapse;
+  font-feature-settings: "kern", "liga", "tnum";
+  margin: $small-spacing 0 $base-spacing 0;
+  table-layout: fixed;
+}
+
+th {
+  border-bottom: 1px solid shade($base-border-color, 25%);
+  font-weight: 600;
+  padding: $small-spacing 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: $base-border;
+  padding: $small-spacing 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+.table-full-width {
+  width: 100%;
+}
+
+.table-compressed {
+  font-size: $base-font-size * 0.8;
+  text-align: center;
+
+  td { padding: $small-spacing / 3 0; }
+
+  th {
+    text-align: center;
+  }
+
+  tr {
+    td { 
+      &:first-child {
+        text-align: right;
+        border-right: 1px solid $medium-gray;
+        padding-right: $small-spacing;
+      }
+    }
+  }
+}

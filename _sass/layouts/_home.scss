@@ -1,0 +1,24 @@
+.project-section {
+    @include outer-container;
+    padding: 0;
+    @include media($medium-screen) {
+        padding: 0 0.75em;
+    }
+
+    margin-bottom: $small-spacing;
+
+    &.blog {
+        padding: 0 $small-spacing;
+    }
+}
+
+.section-header {
+    @include outer-container;
+    padding: 0 $small-spacing;
+    h3 {
+        font-weight: 100;
+        border-bottom: 1px solid $medium-gray;
+        margin-bottom: $small-spacing;        
+    }
+
+}

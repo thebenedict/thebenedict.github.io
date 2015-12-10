@@ -1,0 +1,35 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 1.5em 0;
+}
+
+.project-section {
+    @include outer-container;
+    padding: 0 0.75em;
+    @include media($medium-screen-down) {
+        padding: 0
+    }
+}
+
+.section-header {
+    @include outer-container();
+    padding: 0 0.75em;
+    h3 {
+        font-weight: 100;
+        border-bottom: 1px solid $medium-gray;
+        margin-bottom: 1.25em;        
+    }
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

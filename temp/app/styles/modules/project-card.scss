@@ -1,0 +1,75 @@
+.project-card {
+    @include span-columns(4);
+    @include omega(3n);
+    @include media($large-screen-down) {
+        &:nth-child(3n) { margin-right: flex-gutter($grid-columns, $gutter); }
+        &:nth-child(3n+1) { clear: none }
+        @include span-columns(3);
+        @include omega(2n);
+    }
+    @include media($medium-screen-down) {
+        @include span-columns(6);
+    }
+
+    margin-bottom: 1em;
+    
+    h3 { font-weight: 100; }
+
+    .image {
+        width: 100%;
+        overflow: hidden;
+        max-height: 160px;
+        position: relative;
+        box-shadow: 0px 2px 2px $medium-gray;
+        z-index: 1;
+
+        &:before {
+            content: " ";
+            position: absolute;
+            height: 35%;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            @include linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .45));            
+        }
+    }
+
+    .card-bottom {
+        @include transition-property(transform);
+        @include transition-duration(0.25s);
+        @include transition-timing-function($ease-out-cubic);
+        @include padding(1em 1em);
+        position: relative;
+        top: -55px;
+        background: #fafafa;
+        border-bottom: $base-border;
+
+        .button { 
+            float: right;
+            padding: 3px 10px;
+            margin-top: -0.25em;
+            background: $light-gray;
+        }
+    }
+
+    &:hover {
+        .card-bottom { transform: translateY(55px); }
+    }
+
+    .overlay {
+        color: #fff;
+        position: absolute;
+        bottom: 0.5em;
+        right: 0.75em;
+        text-align: right; 
+    }
+
+    .year {
+        color: $medium-gray;
+    }
+
+    .details {
+        font-size: $small-font-size;
+        div { display: inline-block; }
+    }
+}

@@ -1,0 +1,36 @@
+.hero-unit {
+    @include outer-container;
+    @include media($medium-screen-down) {
+        font-size: $h4-font-size;
+    }
+    font-size: $h2-font-size;
+    margin: 0 auto;
+    padding: 1.5em 0;
+    text-align: center;
+
+    .com {
+        visibility: hidden;
+    }
+
+    .addon {
+        display: none;
+        position: absolute;
+    }
+
+    .contact-bar {
+        @include media($medium-screen-down) {
+            font-size: $h3-font-size;
+        }
+        font-size: $h4-font-size;
+        padding-top: $h4-font-size / 4;
+
+        span {
+            padding: 0 0.4em;
+        }
+
+        .contact-icon { color: $medium-gray; }
+        .icon-twitter:hover { color: $blue; }
+        .icon-github:hover { color: $dark-gray; }
+        .icon-envelope:hover { color: $red; }
+    }
+}

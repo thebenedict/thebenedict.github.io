@@ -1,0 +1,17 @@
+.image {
+  margin-bottom: $base-spacing;
+}
+
+.caption {
+  font-size: 0.85em;
+  text-align: left;
+  padding: 0 $edge-spacing;
+
+  @include media($large-screen) {
+    padding: 0;
+  }
+
+  &.with-spacing {
+    margin-bottom: $base-spacing;
+  }
+}

@@ -1,0 +1,26 @@
+.intro-wrapper {
+	background: $light-gray;
+	padding: 2em;
+	width: 100%;
+	margin: 1em 0 3em 0;
+}
+
+.intro {
+	@include outer-container;
+    font-size: $h4-font-size;
+    text-align: center;
+
+    .tagline {
+    	@include span-columns(8);
+    	@include shift(2);
+
+   		@include media($medium-screen-down) {
+    		@include span-columns(6);
+    		@include shift(0);
+    		padding: 2em 0.5em 4em;
+    	}
+    }
+
+    .small { font-weight: 100; }
+
+}

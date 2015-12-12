@@ -125,9 +125,9 @@ Election-related terms were consistently mentioned more in Swahili than English,
     <tr><td>CHADEMA</td><td>614</td><td>1087</td><td>1701</td><td>0.56</td></tr>
     <tr><td>Zanzibar</td><td>425</td><td>578</td><td>1003</td><td>0.74</td></tr>
     <tr><td>election/uchaguzi*</td><td>1322</td><td>2259</td><td>3581</td><td>0.59</td></tr>
-    <tr><td>corruption/rushwa*</td><td>237</td><td>171</td><td>408</td><td>1.39</td></tr>
-    <tr><td>sports/michezo*</td><td>126</td><td>138</td><td>264</td><td>0.91</td></tr>
-    <tr><td>kenya</td><td>345</td><td>127</td><td>472</td><td>2.72</td></tr>
+    <tr class="shaded"><td>corruption/rushwa*</td><td>237</td><td>171</td><td>408</td><td>1.39</td></tr>
+    <tr class="shaded"><td>sports/michezo*</td><td>126</td><td>138</td><td>264</td><td>0.91</td></tr>
+    <tr class="shaded"><td>Kenya</td><td>345</td><td>127</td><td>472</td><td>2.72</td></tr>
   </tbody>
 </table>
 
@@ -147,9 +147,9 @@ Election-related terms were consistently mentioned more in Swahili than English,
     <tr><td>CHADEMA</td><td>467</td><td>1007</td><td>1334</td><td>0.46</td></tr>
     <tr><td>Zanzibar</td><td>501</td><td>744</td><td>1266</td><td>0.67</td></tr>
     <tr><td>election/uchaguzi*</td><td>889</td><td>2134</td><td>3176</td><td>0.42</td></tr>
-    <tr><td>corruption/rushwa*</td><td>128</td><td>169</td><td>322</td><td>0.76</td></tr>
-    <tr><td>sports/michezo*</td><td>143</td><td>114</td><td>454</td><td>1.25</td></tr>
-    <tr><td>kenya</td><td>170</td><td>68</td><td>338</td><td>2.50</td></tr>
+    <tr class="shaded"><td>corruption/rushwa*</td><td>128</td><td>169</td><td>322</td><td>0.76</td></tr>
+    <tr class="shaded"><td>sports/michezo*</td><td>143</td><td>114</td><td>454</td><td>1.25</td></tr>
+    <tr class="shaded"><td>Kenya</td><td>170</td><td>68</td><td>338</td><td>2.50</td></tr>
   </tbody>
 </table>
 
@@ -169,9 +169,9 @@ Election-related terms were consistently mentioned more in Swahili than English,
     <tr><td>CHADEMA</td><td>327</td><td>484</td><td>811</td><td>0.68</td></tr>
     <tr><td>Zanzibar</td><td>522</td><td>459</td><td>981</td><td>1.14</td></tr>
     <tr><td>election/uchaguzi*</td><td>1042</td><td>1897</td><td>2939</td><td>0.55</td></tr>
-    <tr><td>corruption/rushwa*</td><td>153</td><td>217</td><td>370</td><td>0.71</td></tr>
-    <tr><td>sports/michezo*</td><td>340</td><td>313</td><td>653</td><td>1.09</td></tr>
-    <tr><td>kenya</td><td>270</td><td>183</td><td>453</td><td>1.48</td></tr>
+    <tr class="shaded"><td>corruption/rushwa*</td><td>153</td><td>217</td><td>370</td><td>0.71</td></tr>
+    <tr class="shaded"><td>sports/michezo*</td><td>340</td><td>313</td><td>653</td><td>1.09</td></tr>
+    <tr class="shaded"><td>Kenya</td><td>270</td><td>183</td><td>453</td><td>1.48</td></tr>
   </tbody>
 </table>
 
@@ -190,13 +190,13 @@ Election-related terms were consistently mentioned more in Swahili than English,
     <tr><td>CHADEMA</td><td>1408</td><td>2578</td><td>0.55</td></tr>
     <tr><td>Zanzibar</td><td>1448</td><td>1781</td><td>0.81</td></tr>
     <tr><td>election/uchaguzi*</td><td>3253</td><td>6290</td><td>0.52</td></tr>
-    <tr><td>corruption/rushwa*</td><td>518</td><td>557</td><td>0.93</td></tr>
-    <tr><td>sports/michezo*</td><td>609</td><td>565</td><td>1.08</td></tr>
-    <tr><td>kenya</td><td>785</td><td>378</td><td>2.08</td></tr>
+    <tr class="shaded"><td>corruption/rushwa*</td><td>518</td><td>557</td><td>0.93</td></tr>
+    <tr class="shaded"><td>sports/michezo*</td><td>609</td><td>565</td><td>1.08</td></tr>
+    <tr class="shaded"><td>Kenya</td><td>785</td><td>378</td><td>2.08</td></tr>
   </tbody>
 </table>
 
-<p><div class="caption">Comparison of term counts in English and Swahili. For pairs marked * the English word was counted in English language publications, and the Swahili word in Swahili publications.</div></p>
+<p><div class="caption">Comparison of term counts in English and Swahili. For pairs marked * the English word was counted in English language publications, and the Swahili word in Swahili publications. Shaded rows are terms not directly related to the election.</div></p>
 
 Some academic studies of media bias normalize term counts, for example as counts per 10,000 words or as a fraction of words published. I briefly played with these techniques and didn’t find them useful for highlighting trends between publications, especially on days when few articles were published, so the tables and charts here use absolute counts.
 
@@ -330,4 +330,4 @@ Many academic studies of media bias use human labeling to supplement results fro
 Want to go deeper? Lonely on a Tuesday? The data's online! You can [download the original articles](https://s3.amazonaws.com/tzscrape/tz_articles.zip) in json format or check out [the scrapers](https://github.com/thebenedict/tzscrape) on github. The brave might peruse my idiosyncratic python [scripts for data cleaning](https://github.com/thebenedict/tzanalyze), including a Jupyter notebook with the LDA experiments.
 
 #### Thanks!
-Ben Taylor for context, translation and thoughtful feedback. ([Go check out his blog](http://mtega.com)). Josh Levens, Jessica Padron and Daniel Waistell for help with translation. Angela Ambroz, Mike Dewar, David Feldman, Kelly Hamblin, and Ashely Price for useful discussions. Kelly and Jennifer Hamblin contributed photos.
+Ben Taylor for context, translation and thoughtful feedback. Josh Levens, Jessica Padron and Daniel Waistell for help with translation. Angela Ambroz, Mike Dewar, David Feldman, Kelly Hamblin, and Ashely Price for useful discussions. Kelly and Jennifer Hamblin contributed photos.

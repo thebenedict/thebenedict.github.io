@@ -3,6 +3,8 @@ table {
   font-feature-settings: "kern", "liga", "tnum";
   margin: $small-spacing 0 $base-spacing 0;
   table-layout: fixed;
+
+  .shaded { background: lighten($light-gray, 8); }
 }
 
 th {
@@ -22,6 +24,8 @@ td,
 th {
   vertical-align: middle;
 }
+
+
 
 .table-full-width {
   width: 100%;

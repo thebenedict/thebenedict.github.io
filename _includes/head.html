@@ -9,6 +9,7 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
   <meta property="og:image" content="{% if page.og_image_path %}{{ page.og_image_path | prepend: site.url }}{% endif %}"/>
   <meta property="og:site_name" content="Michael Benedict"/>
+  <meta property="og:description" content="{% if page.og_description %}{{ page.og_description}}{% endif %}"/>
 
   <link rel="stylesheet" href="{{ "/css/lib/normalize.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">

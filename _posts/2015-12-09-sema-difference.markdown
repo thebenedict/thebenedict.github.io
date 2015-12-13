@@ -4,6 +4,7 @@ title: "Sema difference? English and Swahili news coverage of the 2015 general e
 date: 2015-12-09 16:29:18 +0300
 categories: projects
 og_image_path: /images/sema-difference/reading-headlines.jpg
+og_description: "A quantitative look at newspaper coverage of Tanzania's 5th ever general election."
 custom_js:
 - nv.d3
 - count-charts

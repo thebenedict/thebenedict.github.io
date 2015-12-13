@@ -58,22 +58,23 @@ article.post {
   }
 
   blockquote {
-    margin: 0 0 $base-spacing 0;
+    @include fill-parent;
     float: left;
+    margin: 0 0 $base-spacing 0;
+    padding-left: $edge-spacing;
 
     p {
+      @include fill-parent;
+      float: left;
       font-size: 0.8em;
       border-left: 1px solid $dark-gray;
-      padding-left: $small-spacing;
-      margin-bottom: 0.33em;
-      margin-left: $edge-spacing;
-
-      @include media($large-screen) {
-        margin-left: 0;
-      }
+      margin: 0 0 .33em 0;
+      padding: 0 $edge-spacing;
     }
 
     footer {
+      @include fill-parent;
+      float: left;
       font-size: 0.8em;
       color: $medium-gray;
       font-style: italic;
@@ -240,15 +241,20 @@ $ipp-green: #9fca3c;
 #chart-wrapper {
   @include fill-parent;
   float: left;
+
   @include media($large-screen) {
     margin-left: 0;
   }
 
-  margin-left: $edge-spacing;
+  margin: 0 $edge-spacing;
 }
 
 .chart {
+  @include fill-parent;
+  float: left;
   height: 300px;
+
+  svg { float: left; }
 }
 
 .select-wrapper {
@@ -261,10 +267,10 @@ $ipp-green: #9fca3c;
     margin-right: 0.25em;
 
     @include media($large-screen) {
-      margin-left: 0;
+      padding-left: 0;
     }
 
-    margin-left: $edge-spacing;
+    padding-left: $edge-spacing;
   }
 
   select {

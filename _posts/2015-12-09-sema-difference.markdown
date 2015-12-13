@@ -3,6 +3,7 @@ layout: post
 title: "Sema difference? English and Swahili news coverage of the 2015 general election in Tanzania"
 date: 2015-12-09 16:29:18 +0300
 categories: projects
+og_image_path: /images/sema-difference/reading-headlines.jpg
 custom_js:
 - nv.d3
 - count-charts

@@ -1,11 +1,13 @@
 .image-wrapper {
+  @include fill-parent;
+  float: left;
   margin-bottom: $base-spacing;
   text-align: center;
 }
 
 .inline-image {
-  margin-right: $base-spacing;
-  max-width: 43%;
+  margin-right: $small-spacing;
   height: auto;
+  max-width: 36%;
   max-height: 280px;
 }

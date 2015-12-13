@@ -25,12 +25,6 @@ th {
   vertical-align: middle;
 }
 
-
-
-.table-full-width {
-  width: 100%;
-}
-
 .table-compressed {
   font-size: $base-font-size * 0.8;
   text-align: center;
@@ -39,15 +33,5 @@ th {
 
   th {
     text-align: center;
-  }
-
-  tr {
-    td { 
-      &:first-child {
-        text-align: right;
-        border-right: 1px solid $medium-gray;
-        padding-right: $small-spacing;
-      }
-    }
   }
 }

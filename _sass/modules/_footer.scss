@@ -1,7 +1,13 @@
 .site-footer {
+  @include outer-container;
+
+  .wrapper {
+    @include fill-parent;
+    float: left;
+    padding: $small-spacing 0 $base-spacing*1.25 0;
+  }
+
   svg {
     max-height: 2.5em;
   }
-
-  padding-bottom: $base-spacing;
 }

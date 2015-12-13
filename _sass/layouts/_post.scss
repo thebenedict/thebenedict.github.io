@@ -16,6 +16,8 @@ article.post {
   text-align: left;
   
   h1, h2, h3, h4, p {
+    @include fill-parent;
+    float: left;
     margin: 0;
 
     @include media($large-screen) {
@@ -57,6 +59,7 @@ article.post {
 
   blockquote {
     margin: 0 0 $base-spacing 0;
+    float: left;
 
     p {
       font-size: 0.8em;
@@ -165,18 +168,20 @@ article.post {
     font-family: $serif; 
   }
 
-  ol { 
-    @extend %default-ol;
-    margin-bottom: $base-spacing;
-    font-size: $base-font-size * 0.8;
-    font-weight: 300;
-  }
-
   ul {
     @extend %default-ul;
     margin-bottom: $base-spacing;
     font-size: $base-font-size * 0.8;
     font-weight: 300;
+    float: left;
+  }
+
+  ol { 
+    @extend %default-ol;
+    margin-bottom: $base-spacing;
+    font-size: $base-font-size * 0.85;
+    font-weight: 300;
+    float: left;
   }
 }
 
@@ -229,6 +234,8 @@ $ipp-green: #9fca3c;
 
 .select-wrapper {
   display: none;
+  @include fill-parent;
+  float: left;
 
   .label { 
     display: inline-block;
@@ -249,7 +256,33 @@ $ipp-green: #9fca3c;
 }
 
 .summary-table {
-  th {
-    &:first-child { width: 20%; }
+  @include media($medium-screen) {
+    width: 100%;
+
+    th {
+      &:first-child { width: 20%; }
+    }
+  }
+
+  td { 
+    &:first-child {
+      text-align: right;
+      border-right: 1px solid $medium-gray;
+      padding-right: $small-spacing;
+    }
+  }
+}
+
+.publisher-table {
+  font-size: 0.85em;
+}
+
+.scrollable-table-wrapper {
+  overflow-x: scroll;
+  @include fill-parent;
+  float: left;
+  th, td {
+    &:first-child { min-width: 12em; }
+    min-width: 8em;
   }
 }

@@ -36,7 +36,10 @@
     }
 
     .card-bottom {
-        @include padding(1em 1em);
+        @include fill-parent;
+        float: left;
+
+        padding: $small-spacing;
         background: #fafafa;
         border-bottom: $base-border;
 

@@ -170,6 +170,13 @@ article.post {
 
   ul {
     @extend %default-ul;
+    @include media($large-screen) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    margin-left: $edge-spacing;
+    margin-right: $edge-spacing;
     margin-bottom: $base-spacing;
     font-size: $base-font-size * 0.8;
     font-weight: 300;
@@ -178,6 +185,13 @@ article.post {
 
   ol { 
     @extend %default-ol;
+    @include media($large-screen) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    margin-left: $edge-spacing;
+    margin-right: $edge-spacing;
     margin-bottom: $base-spacing;
     font-size: $base-font-size * 0.85;
     font-weight: 300;
@@ -226,6 +240,11 @@ $ipp-green: #9fca3c;
 #chart-wrapper {
   @include fill-parent;
   float: left;
+  @include media($large-screen) {
+    margin-left: 0;
+  }
+
+  margin-left: $edge-spacing;
 }
 
 .chart {
@@ -275,6 +294,11 @@ $ipp-green: #9fca3c;
 
 .publisher-table {
   font-size: 0.85em;
+  @include media($large-screen) {
+    margin: 0;
+  }
+
+  margin: 0 $edge-spacing;
 }
 
 .scrollable-table-wrapper {

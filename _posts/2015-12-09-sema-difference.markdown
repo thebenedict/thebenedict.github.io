@@ -38,8 +38,8 @@ On October 25 Tanzania held its 5th general election since 1992, electing John M
 
 A wrinkle worth mentioning happened in Zanzibar, which runs its own presidential election in parallel with the mainland. Amid rumors of an opposition victory the CCM-dominated Zanzibar Electoral Commission (ZEC) [annulled the election result](https://www.washingtonpost.com/news/monkey-cage/wp/2015/11/01/in-zanzibar-democracy-peace-and-unity-are-at-stake-after-annulled-elections/) on October 28, citing irregularities. The move was [widely criticized](http://tanzania.usembassy.gov/pr_10282015a.html) and left Zanzibar in an uncertain political situation that is still unresolved.
 
-### 3 publishers, 6 newspapers
-Tanzania has an active media landscape including over 30 print publications that vary widely in scope and quality. Conveniently the 3 most prominent publishers  each produce a daily newspaper in English and Swahili, so these 6 papers were an obvious choice for this project. The Kenya-based Nation Media Group publishes The [Citizen](http://thecitizen.co.tz) (EN) and [Mwananchi](http://mwananchi.co.tz) (SW), Tanzanian-owned IPP Media publishes [The Guardian](http://www.ippmedia.com/?m=54&lang=EN) (EN) and [Nipashe](http://www.ippmedia.com/?m=54&lang=SW) (SW), and government-owned TSN (Tanzanian Standard Newspapers) publishes the [Daily News](http://dailynews.co.tz/) (EN) and [Habarileo](http://habarileo.co.tz) (SW). Here they are in a table:
+### Three publishers, six newspapers
+Tanzania has an active media landscape including over 30 print publications that vary widely in scope and quality. Conveniently the three most prominent publishers  each produce a daily newspaper in English and Swahili, so these six papers were an obvious choice for this project. The Kenya-based Nation Media Group publishes The [Citizen](http://thecitizen.co.tz) (EN) and [Mwananchi](http://mwananchi.co.tz) (SW), Tanzanian-owned IPP Media publishes [The Guardian](http://www.ippmedia.com/?m=54&lang=EN) (EN) and [Nipashe](http://www.ippmedia.com/?m=54&lang=SW) (SW), and government-owned TSN (Tanzanian Standard Newspapers) publishes the [Daily News](http://dailynews.co.tz/) (EN) and [Habarileo](http://habarileo.co.tz) (SW). Here they are in a table:
 
 <div class="scrollable-table-wrapper">
   <table class="publisher-table">
@@ -68,14 +68,14 @@ Tanzania has an active media landscape including over 30 print publications that
   </table>
 </div>
 
-<p><div class="caption">The 6 newspapers used for this project. Nation Media is foreign-owned, IPP Media is owned by a wealthy Tanzanian, and TSN is controlled by the government of Tanzania.</div></p>
+<p><div class="caption">The six newspapers used for this project. Nation Media is foreign-owned, IPP Media is owned by a wealthy Tanzanian, and TSN is owned by the government of Tanzania.</div></p>
 
 ### The setup
-On September 14, 2015 I set up scrapers to download all articles linked from the front page of these 6 newspapers’ websites. The scrapers were built in python with [scrapy](http://scrapy.org) and ran twice daily, with deduplication done in post-processing. The election was held on October 25, and by mid-November the scrapers had accumulated almost 9000 articles: about 4900 in English and 3900 in Swahili. I used Python to clean and organize the scraped articles, and looked at the data in 3 ways:
+On September 14, 2015 I set up scrapers to download all articles linked from the front page of these six newspapers’ websites. The scrapers were built in Python with [scrapy](http://scrapy.org) and ran twice daily, with deduplication done in post-processing. The election was held on October 25, and by mid-November the scrapers had accumulated almost 9000 articles: about 4900 in English and 3900 in Swahili. I used Python to clean and organize the scraped articles, and looked at the data in three ways:
 
   1. Counted terms of interest by language and publication
   2. Manually compared selected English and Swahili headlines
-  3. Experimented with topic modeling using Latent Dirichlet Allocation (LDA) on the English articles
+  3. Experimented with topic modeling using [Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) (LDA) on the English articles
 
 ### Counting terms
 I selected some key terms related to the election, plus a few more general terms for comparison, and counted the number of times they were mentioned over two months from September 15 - November 15.
@@ -118,7 +118,7 @@ Election-related terms were consistently mentioned more in Swahili than English,
       <th class="nation">Citizen</th>
       <th class="nation sw">Mwananchi</th>
       <th>Total</th>
-      <th>Citizen/Mwananchi</th>
+      <th>Citizen:Mwananchi</th>
     </thead>
     <tbody>
       <tr><td>Magufuli</td><td>644</td><td>1164</td><td>1808</td><td>0.55</td></tr>
@@ -140,7 +140,7 @@ Election-related terms were consistently mentioned more in Swahili than English,
       <th class="ipp">Guardian</th>
       <th class="ipp sw">Nipashe</th>
       <th>Total</th>
-      <th>Guardian/Nipashe</th>
+      <th>Guardian:Nipashe</th>
     </thead>
     <tbody>
       <tr><td>Magufuli</td><td>326</td><td>1099</td><td>1860</td><td>0.30</td></tr>
@@ -162,7 +162,7 @@ Election-related terms were consistently mentioned more in Swahili than English,
       <th class="tsn">Daily News</th>
       <th class="tsn sw">Habarileo</th>
       <th>Total</th>
-      <th>Daily News/Habarileo</th>
+      <th>Daily News:Habarileo</th>
     </thead>
     <tbody>
       <tr><td>Magufuli</td><td>761</td><td>1205</td><td>1966</td><td>0.63</td></tr>
@@ -183,7 +183,7 @@ Election-related terms were consistently mentioned more in Swahili than English,
       <th></th>
       <th class="">Total (EN)</th>
       <th class="sw">Total (SW)</th>
-      <th>Total (EN)/Total (SW)</th>
+      <th>Total (EN):Total (SW)</th>
     </thead>
     <tbody>
       <tr><td>Magufuli</td><td>1731</td><td>3468</td><td>0.50</td></tr>
@@ -289,7 +289,7 @@ Second, and more positive, is that for each publisher there doesn’t appear to 
 ### Topic modeling
 Word counts turned out to be a simple if rough way to quantify topic coverage, but counts can’t incorporate word sense or context. [Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) (LDA) is a computational technique for discovering groups of words that represent topics covered by a collection of documents. It is often applied to find topics in large, unstructured texts, for example [Sarah Palin’s leaked emails](http://blog.echen.me/2011/06/27/topic-modeling-the-sarah-palin-emails/) in 2011 (this page also links to a good [general discussion of LDA](http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/)). In the end it wasn’t especially useful, but worth including because it highlighted two aspects of the overall election coverage that I didn’t expect.
 
-I ran LDA on the English language articles, n = 4935. I used [NLTK](http://www.nltk.org/) and [Gensim](https://radimrehurek.com/gensim/) to clean the text (downcase, remove punctuation/white space/stop words, and identify common bigrams), and then ran Gensim’s LDA implementation with k = 100. k is an LDA parameter which represents the number of topics and is often chosen heuristically. I then manually reviewed each topic and assigned it a label. For example a topic including these terms:
+I ran LDA on the English language articles, n = 4935. I used [NLTK](http://www.nltk.org/) and [Gensim](https://radimrehurek.com/gensim/) to clean the text (downcase, remove punctuation/white space/[stop words](https://en.wikipedia.org/wiki/Stop_words), and identify common bigrams), and then ran Gensim’s LDA implementation with k = 100. k is an LDA parameter which represents the number of topics and is often chosen heuristically. I then manually reviewed each topic and assigned it a label. For example a topic including these terms:
 
 > players, stars, team, taifa_stars, tournament, mkwasa, tanzania, dar_es, teams, match
 
@@ -330,7 +330,7 @@ When I started this project I thought it would be an opportunity to learn more a
 Many academic studies of media bias use human labeling to supplement results from LDA and other machine learning approaches. If I were to take this project further, for example to examine what topic coverage is associated with the high counts of election-related words in Swahili, I would start by having human readers label articles. I’d only look to topic models or machine classification if trends were still unclear, or I wanted to try and generalize the results to new articles.
 
 ### Data
-Want to go deeper? Lonely on a Tuesday? The data's online! You can [download the original articles](https://s3.amazonaws.com/tzscrape/tz_articles.zip) in json format or check out [the scrapers](https://github.com/thebenedict/tzscrape) on github. The brave might peruse my idiosyncratic python [scripts for data cleaning](https://github.com/thebenedict/tzanalyze), including a Jupyter notebook with the LDA experiments.
+Want to go deeper? Lonely on a Tuesday? The data's online! You can [download the original articles](https://s3.amazonaws.com/tzscrape/tz_articles.zip) in json format or check out [the scrapers](https://github.com/thebenedict/tzscrape) on github. The brave might peruse my idiosyncratic Python [scripts for data cleaning](https://github.com/thebenedict/tzanalyze), including a Jupyter notebook with the LDA experiments.
 
 #### Thanks!
 Ben Taylor for context, translation and thoughtful feedback. Josh Levens, Jessica Padron and Daniel Waistell for help with translation. Angela Ambroz, Mike Dewar, David Feldman, Kelly Hamblin, and Ashely Price for useful discussions. Kelly and Jennifer Hamblin contributed photos.

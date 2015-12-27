@@ -4,7 +4,7 @@ title: "Free Basics opponents need a credible alternative"
 date: 2015-12-26 09:55:18 +0300
 categories: posts
 og_image_path: /images/free-basics-alternatives/tigo-fb-upsell-combined.jpg
-og_description: "Facebook's free internet access meets a real need for poor people. Any compelling argument that they shouldn’t have it has to point to alternatives that could reasonably compete with Facebook’s solution."
+og_description: "Free Basics meets a real need for poor people. Any argument that they shouldn’t have it has to point to alternatives that could compete with Facebook’s solution."
 custom_js:
 ---
 
